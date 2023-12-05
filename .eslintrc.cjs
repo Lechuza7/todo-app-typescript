@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "./tsconfig.json",
     ],
     "overrides": [
         {
@@ -23,12 +24,13 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": "./tsconfig.json",
     },
     "plugins": [
         "react"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off"
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
     }
 }
