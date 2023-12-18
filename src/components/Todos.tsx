@@ -4,7 +4,7 @@ import { Todo } from './Todo'
 interface Props {
   todos: ListOfTodos
   onToggleCompleteTodo: ({ id, completed }: Pick<TodoType, 'id' | 'completed'>) => void
-  onRemoveTodo: ({ id }: TodoId) => void
+  onRemoveTodo: ({ id }: TodoId) => void //void lo usamos para indicar que la función no devuelve un valor
 }
 
 export const Todos: React.FC<Props> = ({ todos, onToggleCompleteTodo, onRemoveTodo }) => {
